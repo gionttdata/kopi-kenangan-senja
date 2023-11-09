@@ -7,6 +7,18 @@ document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
+// Toggle class Active for Search Form
+
+const searchForm = document.querySelector(".search-form");
+const searchBox = document.querySelector("#search-box");
+
+document.querySelector("#search-button").onclick = (e) => {
+  searchForm.classList.toggle("active");
+  searchBox.focus();
+  // Preventing the page scroll up back to top
+  e.preventDefault();
+};
+
 // Click outside sidebar to hide Navbar (if screensize < tablet)
 const hamburger = document.querySelector("#hamburger-menu");
 
